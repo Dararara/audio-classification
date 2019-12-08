@@ -6,6 +6,8 @@ import torch
 def checkAudio(path):
     rnn = RNN(input_size, hidden_size, num_layers, num_classes)
     
+    rnn.load_state_dict(torch.load('./rnn.pth'))
+    
     sample_rate,waveform = wa.read(path)
 
     mfcc_feature = mfcc(waveform, sample_rate, nfft= 1256)
