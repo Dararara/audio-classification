@@ -1,5 +1,6 @@
 import wx 
 from checkaudio import checkAudio
+from playAudio import play
 class MyFileDropTarget(wx.FileDropTarget):
     def __init__(self, window):
         wx.FileDropTarget.__init__(self)
@@ -19,6 +20,7 @@ class MyFileDropTarget(wx.FileDropTarget):
         path = ''.join(filenames)
         #print(path)
         #print(checkAudio(path))
+        play(path)
         wx.StaticText(self.window, label = checkAudio(path) , pos = (100,100)) 
         return True
         
