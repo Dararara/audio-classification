@@ -17,7 +17,7 @@ rnn = RNN(input_size, hidden_size, num_layers, num_classes)
 optimizer=torch.optim.Adam(rnn.parameters(), lr=0.01)
 
 
-for epoch in range(100):
+for epoch in range(5):
     iter_data = iter(train_loader)
     for i in range(len(dataset)):
         audio, label = iter_data.next()

@@ -17,11 +17,12 @@ class AudioDataset(Dataset):
         self.index_to_name_dict = defaultdict(str)
         count = 0
         for i in os.listdir(data_path):
+            
             self.name_to_index_dict[i] = count
-            count += 1
             self.index_to_name_dict[count] = i
             for wav in os.listdir(os.path.join(data_path, i)):
                 self.audio_set.append((i, wav))
+            count += 1
         self.data_path = data_path
     def __getitem__(self, index):
         sub_class = self.audio_set[index][0]

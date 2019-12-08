@@ -26,11 +26,11 @@ def checkAudio(path):
             
     pre_cls = torch.argmax(prob)
 
-    if pre_cls == torch.tensor(1):
+    if pre_cls == torch.tensor(0):
         answer = '望门投止思张俭'
-    elif pre_cls == torch.tensor(2):
+    elif pre_cls == torch.tensor(1):
         answer = '忍死须臾待杜根'
-    elif pre_cls == torch.tensor(3):
+    elif pre_cls == torch.tensor(2):
         answer = '我自横刀向天笑'
     else:
         answer = '去留肝胆两昆仑'
