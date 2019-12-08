@@ -26,3 +26,6 @@ This simple classification project can classify .wav to 4 types :"望门投止�
   
   checkaudio.py is used for predicting single .wav file
 
+### 使用方法
+运行python train.py训练模型
+运行python forfun.py打开GUI预测
